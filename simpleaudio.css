@@ -66,10 +66,10 @@ div#single-song-player div.bottom-container div.control-container div.amplitude-
   margin-left: 10px;
 }
 div#single-song-player div.bottom-container div.control-container div.amplitude-play-pause.amplitude-paused {
-  background: url('play.svg');
+  background: url('https://rawgit.com/benbois/webtesting/master/play.svg');
 }
 div#single-song-player div.bottom-container div.control-container div.amplitude-play-pause.amplitude-playing {
-  background: url('pause.svg');
+  background: url('https://rawgit.com/benbois/webtesting/master/pause.svg');
 }
 div#single-song-player div.bottom-container div.control-container div.meta-container {
   float: left;
