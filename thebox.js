@@ -1,5 +1,6 @@
 /*
  * source: http://thebox.maxvoltar.com/assets/js/master.js
+ * to insert in code: https://rawgit.com/benbois/webtesting/master/thebox.js
  */
 
 jQuery(function() {
