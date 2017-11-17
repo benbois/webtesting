@@ -45,7 +45,7 @@ function initAudio() {
 		loadingIndicator = jQuery('.player #loading');
 		positionIndicator = jQuery('.player #handle');
 		timeleft = jQuery('.player #timeleft');
-		
+		/*
 		if ((audio.buffered != undefined) && (audio.buffered.length != 0)) {
 			jQuery(audio).bind('progress', function() {
 				var loaded = parseInt(((audio.buffered.end(0) / audio.duration) * 100), 10);
@@ -55,6 +55,8 @@ function initAudio() {
 		else {
 			loadingIndicator.remove();
 		}
+		*/
+		loadingIndicator.remove();
 		
 		jQuery(audio).bind('timeupdate', function() {
 			
