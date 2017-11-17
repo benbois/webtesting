@@ -2,15 +2,15 @@
  * source: http://thebox.maxvoltar.com/assets/js/master.js
  */
 
-$(function() {
+jQuery(function() {
 	initAudio();
 	addPopupLink();
-	$("a.popup").popupWindow({height:150, width:400});
+	jQuery("a.popup").popupWindow({height:150, width:400});
 });
 
 function addPopupLink() {
-	var episodeID = $('body')[0].id;
-	$(".default .player").append("<a class='popup' href='http://thebox.maxvoltar.com/" + episodeID + "?audio'>Popup</a>");
+	var episodeID = jQuery('body')[0].id;
+	jQuery(".default .player").append("<a class='popup' href='http://thebox.maxvoltar.com/" + episodeID + "?audio'>Popup</a>");
 }
 
 function initAudio() {
@@ -25,7 +25,7 @@ function initAudio() {
 
 	if (supportsAudio) {
 		
-		var episodeTitle = $('body')[0].id;
+		var episodeTitle = jQuery('body')[0].id;
 		
 		var player = '<p class="player">\
 									  <span id="playtoggle" />\
@@ -39,15 +39,15 @@ function initAudio() {
 										</audio>\
 									</p>';									
 		
-		$(player).insertAfter("#listen .photo");
+		jQuery(player).insertAfter("#listen .photo");
 		
-		audio = $('.player audio').get(0);
-		loadingIndicator = $('.player #loading');
-		positionIndicator = $('.player #handle');
-		timeleft = $('.player #timeleft');
+		audio = jQuery('.player audio').get(0);
+		loadingIndicator = jQuery('.player #loading');
+		positionIndicator = jQuery('.player #handle');
+		timeleft = jQuery('.player #timeleft');
 		
 		if ((audio.buffered != undefined) && (audio.buffered.length != 0)) {
-			$(audio).bind('progress', function() {
+			jQuery(audio).bind('progress', function() {
 				var loaded = parseInt(((audio.buffered.end(0) / audio.duration) * 100), 10);
 				loadingIndicator.css({width: loaded + '%'});
 			});
@@ -56,7 +56,7 @@ function initAudio() {
 			loadingIndicator.remove();
 		}
 		
-		$(audio).bind('timeupdate', function() {
+		jQuery(audio).bind('timeupdate', function() {
 			
 			var rem = parseInt(audio.duration - audio.currentTime, 10),
 					pos = (audio.currentTime / audio.duration) * 100,
@@ -68,7 +68,7 @@ function initAudio() {
 			if (!loaded) {
 				loaded = true;
 				
-				$('.player #gutter').slider({
+				jQuery('.player #gutter').slider({
 						value: 0,
 						step: 0.01,
 						orientation: "horizontal",
@@ -86,12 +86,12 @@ function initAudio() {
 			}
 			
 		}).bind('play',function(){
-			$("#playtoggle").addClass('playing');		
+			jQuery("#playtoggle").addClass('playing');		
 		}).bind('pause ended', function() {
-			$("#playtoggle").removeClass('playing');		
+			jQuery("#playtoggle").removeClass('playing');		
 		});		
 		
-		$("#playtoggle").click(function() {			
+		jQuery("#playtoggle").click(function() {			
 			if (audio.paused) {	audio.play();	} 
 			else { audio.pause(); }			
 		});
