@@ -3,41 +3,10 @@
  */
 
 $(function() {
-	$("body").addClass("listen");
-	$("#nav-listen a").click(showListen);
-	$("#nav-archive a").click(showArchive);
-	$("#nav-info a").click(showInfo);
-	$("#nav-rss a[href='#rss']").click(toggleRSS);
 	initAudio();
 	addPopupLink();
 	$("a.popup").popupWindow({height:150, width:400});
 });
-
-function showListen() {
-	$("body").removeClass("archive");
-	$("body").removeClass("info");
-	$("body").addClass("listen");
-	return false;
-}
-
-function showArchive() {
-	$("body").removeClass("listen");
-	$("body").removeClass("info");
-	$("body").addClass("archive");
-	return false;
-}
-
-function showInfo() {
-	$("body").removeClass("listen");
-	$("body").removeClass("archive");
-	$("body").addClass("info");
-	return false;
-}
-
-function toggleRSS() {
-	$("#nav-rss").toggleClass("open");
-	return false;
-}
 
 function addPopupLink() {
 	var episodeID = $('body')[0].id;
@@ -66,9 +35,7 @@ function initAudio() {
 									  </span>\
 									  <span id="timeleft" />\
 									  <audio preload="metadata">\
-									    <source src="http://maxvoltar.s3.amazonaws.com/thebox/' + episodeTitle + '.ogg" type="audio/ogg"></source>\
-											<source src="http://maxvoltar.s3.amazonaws.com/thebox/' + episodeTitle + '.mp3" type="audio/mpeg"></source>\
-												<source src="http://maxvoltar.s3.amazonaws.com/thebox/' + episodeTitle + '.wav" type="audio/x-wav"></source>\
+									    <source src="https://www.dropbox.com/s/8dxsvr6obpbyhc1/Elise.mp3?raw=1" type="audio/mpeg"></source>\
 										</audio>\
 									</p>';									
 		
