@@ -104,7 +104,6 @@ input[type=range] {
   margin: 10px 0;
   width: 100%;
 }
-/*
 input[type=range]:focus {
   outline: none;
 }
@@ -188,4 +187,3 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: #2497E3;
 }
-*/
