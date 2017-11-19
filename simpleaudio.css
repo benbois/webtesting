@@ -11,7 +11,6 @@ div#single-song-player div.bottom-container {
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  display: inline;
 }
 div#single-song-player div.bottom-container progress.amplitude-song-played-progress:not([value]) {
   background-color: #313252;
